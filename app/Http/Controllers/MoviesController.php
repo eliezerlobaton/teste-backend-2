@@ -12,7 +12,7 @@ class MoviesController extends Controller
         try {
             $response = Http::withHeaders([
                 'X-RapidAPI-Host' => 'moviesdatabase.p.rapidapi.com',
-                'X-RapidAPI-Key' => 'da032df6demsh10b63f30a937906p105ecdjsn2df723e218a8',
+                'X-RapidAPI-Key' => env('RAPID_API_KEY'),
             ])->get('https://moviesdatabase.p.rapidapi.com/titles', [
                 'limit' => 50,
             ]);
